@@ -7,8 +7,8 @@ import githubLogo from 'public/images/github-mark-white.svg';
 import searchLogo from 'public/images/search.svg';
 import callLogo from 'public/images/call.svg';
 import facebookLogo from 'public/images/facebook.svg';
-import YouTubeLogo from 'public/images/youtube.svg';
-import linkedInLogo from 'public/images/linkedin.svg';
+import YouTubeLogo from 'public/images/youTube.svg';
+import linkedInLogo from 'public/images/linkedIn.svg';
 import instagram from 'public/images/instagram.svg';
 
 

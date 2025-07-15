@@ -3,13 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import facebookLogo from '../public/images/facebook.svg'
 
-import integrityLogo from '../public/images/integrity.svg'
-import demonstrateLogo from '../public/images/demonstrate.svg'
-import diversityLogo from '../public/images/diversity.svg'
-import teamworkLogo from '../public/images/teamwork.svg'
-import technologyLogo from '../public/images/technology.svg'
-import corporateLogo from '../public/images/corporate.svg'
-import digitalLogo from '../public/images/digital.svg'
+import integrityLogo from '../public/images/Integrity.svg'
+import demonstrateLogo from '../public/images/Demonstrate.svg'
+import diversityLogo from '../public/images/Diversity.svg'
+import teamworkLogo from '../public/images/Teamwork.svg'
+import technologyLogo from '../public/images/Technology.svg'
+import corporateLogo from '../public/images/Corporate.svg'
+import digitalLogo from '../public/images/Digital.svg'
 
 export function CustomerExperience() {
     return (
