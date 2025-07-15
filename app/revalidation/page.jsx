@@ -7,6 +7,9 @@ export const metadata = {
     title: 'On-Demand Revalidation'
 };
 
+// Force dynamic rendering to avoid build-time fetch issues
+export const dynamic = 'force-dynamic';
+
 const tagName = 'randomWiki';
 const randomWikiUrl = 'https://en.wikipedia.org/api/rest_v1/page/random/summary';
 const maxExtractLength = 200;
@@ -56,24 +59,38 @@ export default async function Page() {
 }
 
 async function RandomWikiArticle() {
-    const randomWiki = await fetch(randomWikiUrl, {
-        next: { revalidate: revalidateTTL, tags: [tagName] }
-    });
+    try {
+        const randomWiki = await fetch(randomWikiUrl, {
+            next: { revalidate: revalidateTTL, tags: [tagName] }
+        });
 
-    const content = await randomWiki.json();
-    let extract = content.extract;
-    if (extract.length > maxExtractLength) {
-        extract = extract.slice(0, extract.slice(0, maxExtractLength).lastIndexOf(' ')) + ' [...]';
+        if (!randomWiki.ok) {
+            throw new Error(`HTTP error! status: ${randomWiki.status}`);
+        }
+
+        const content = await randomWiki.json();
+        let extract = content.extract;
+        if (extract.length > maxExtractLength) {
+            extract = extract.slice(0, extract.slice(0, maxExtractLength).lastIndexOf(' ')) + ' [...]';
+        }
+
+        return (
+            <Card className="max-w-2xl">
+                <h3 className="text-2xl text-neutral-900">{content.title}</h3>
+                <div className="text-lg font-bold">{content.description}</div>
+                <p className="italic">{extract}</p>
+                <a target="_blank" rel="noopener noreferrer" href={content.content_urls.desktop.page}>
+                    From Wikipedia
+                </a>
+            </Card>
+        );
+    } catch (error) {
+        console.error('Failed to fetch Wikipedia article:', error);
+        return (
+            <Card className="max-w-2xl">
+                <h3 className="text-2xl text-neutral-900">Unable to load Wikipedia article</h3>
+                <p className="italic">There was an error fetching the random Wikipedia article. Please try again later.</p>
+            </Card>
+        );
     }
-
-    return (
-        <Card className="max-w-2xl">
-            <h3 className="text-2xl text-neutral-900">{content.title}</h3>
-            <div className="text-lg font-bold">{content.description}</div>
-            <p className="italic">{extract}</p>
-            <a target="_blank" rel="noopener noreferrer" href={content.content_urls.desktop.page}>
-                From Wikipedia
-            </a>
-        </Card>
-    );
 }
