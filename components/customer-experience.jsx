@@ -22,7 +22,7 @@ export function CustomerExperience() {
                     </div>
                     <div className='card-section pt-5'>
                         <div className="row px-lg-5 py-3">
-                            <div className='col-md-3 mb-4'>
+                            <div className='col-lg-3 col-md-6 mb-4 px-md-0 px-5'>
                                 <div className='pe-lg-5'>
                                     <Link href="/">
                                         <Image src={integrityLogo} alt="Integrity Logo" width={37} height={37} className="inline-block mr-2" />
@@ -31,7 +31,7 @@ export function CustomerExperience() {
                                     <p>Displaying the highest level of Integrity in the way we conduct our business</p>
                                 </div>
                             </div>
-                            <div className='col-md-3 mb-4'>
+                            <div className='col-lg-3 col-md-6 mb-4 px-md-0 px-5'>
                                 <div className="pe-lg-5">
                                     <Link href="/">
                                         <Image src={demonstrateLogo} alt="Demonstrate Logo" width={37} height={37} className="inline-block mr-2" />
@@ -40,7 +40,7 @@ export function CustomerExperience() {
                                     <p>Demonstrating a strong Will to Win in the market place</p>
                                 </div>
                             </div>
-                            <div className='col-md-3 mb-4'>
+                            <div className='col-lg-3 col-md-6 mb-4 px-md-0 px-5'>
                                 <div className="pe-lg-5">
                                     <Link href="/">
                                         <Image src={diversityLogo} alt="Diversity Logo" width={37} height={37} className="inline-block mr-2" />
@@ -49,7 +49,7 @@ export function CustomerExperience() {
                                     <p>Promoting Diversity in the work place and community</p>
                                 </div>
                             </div>
-                            <div className='col-md-3 mb-4'>
+                            <div className='col-lg-3 col-md-6 mb-4 px-md-0 px-5'>
                                 <div className="pe-lg-5">
                                     <Link href="/">
                                         <Image src={teamworkLogo} alt="Teamwork Logo" width={37} height={37} className="inline-block mr-2" />
@@ -58,8 +58,8 @@ export function CustomerExperience() {
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A semper aenean id pen</p>
                                 </div>
                             </div>
-                            <div className='col-md-3'>
-                                <div className="pe-lg-5">
+                            <div className='col-lg-3 col-md-6 mb-4 px-md-0 px-5'>
+                                 <div className="pe-lg-5">
                                     <Link href="/">
                                         <Image src={integrityLogo} alt="Collaboration Logo" width={37} height={37} className="inline-block mr-2" />
                                     </Link>
@@ -67,8 +67,8 @@ export function CustomerExperience() {
                                     <p>Displaying the highest level of Integrity in the way we conduct our business</p>
                                 </div>
                             </div>
-                            <div className='col-md-3'>
-                                <div className="pe-lg-5">
+                            <div className='col-lg-3 col-md-6 mb-4 px-md-0 px-5'>
+                                 <div className="pe-lg-5">
                                     <Link href="/">
                                         <Image src={technologyLogo} alt="Technology Logo" width={37} height={37} className="inline-block mr-2" />
                                     </Link>
@@ -76,8 +76,8 @@ export function CustomerExperience() {
                                     <p>Harnessing the power of Technology to deliver better customer experience</p>
                                 </div>
                             </div>
-                            <div className='col-md-3'>
-                                <div className="pe-lg-5">
+                            <div className='col-lg-3 col-md-6 mb-4 px-md-0 px-5'>
+                                 <div className="pe-lg-5">
                                     <Link href="/">
                                         <Image src={corporateLogo} alt="Corporate Logo" width={37} height={37} className="inline-block mr-2" />
                                     </Link>
@@ -85,8 +85,8 @@ export function CustomerExperience() {
                                     <p>Setting the standard for the best Corporate Citizenship in the communities we work</p>
                                 </div>
                             </div>
-                            <div className='col-md-3'>
-                                <div className="pe-lg-5">
+                            <div className='col-lg-3 col-md-6 mb-4 px-md-0 px-5'>
+                                 <div className="pe-lg-5">
                                     <Link href="/">
                                         <Image src={digitalLogo} alt="Digital Logo" width={37} height={37} className="inline-block mr-2" />
                                     </Link>

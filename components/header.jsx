@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import ipdcFinanceLogo from 'public/ipdc-logo.svg';
@@ -25,13 +27,16 @@ export function Header() {
 
             <section className='overflow-hidden hero-section-wrapper'>
                 <div className="container navigation-section">
-                    <nav className="d-flex justify-content-between align-items-center py-3">
+                    {/* <nav className="navbar d-flex justify-content-between align-items-center py-3">
                         <div className='d-flex align-items-center gap-5'>
                             <Link href="/">
                                 <Image src={ipdcFinanceLogo} alt="IPDC Finance logo" />
                             </Link>
+                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
                             {!!navItems?.length && (
-                                <ul className="d-flex justify-content-center ms-xl-5 ps-xl-5 mb-0 gap-5 list-unstyled">
+                                <ul id="navbarSupportedContent" className="d-flex justify-content-center ms-xxl-5 collapse navbar-collapse ps-xl-5 mb-0 gap-5 list-unstyled">
                                     {navItems.map((item, index) => (
                                         <li key={index}>
                                             <Link href={item.href} className="nav-menu">
@@ -48,11 +53,50 @@ export function Header() {
                             </Link>
                             <button className='btn btn-primary px-4 fw-medium fs-6'>iSERVICE</button>
                         </div>
+                    </nav> */}
+                    <nav className="navbar navbar-expand-lg">
+                        <div className="container-fluid">
+                            <a className="navbar-brand" href="#">
+                                <Image src={ipdcFinanceLogo} alt="IPDC Finance logo" />
+                            </a>
+                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-4  ms-xxl-5 navbar-collapse ps-xl-5 mb-0  list-unstyled">
+                                    <li className="nav-item">
+                                        <a className="nav-link nav-menu active" aria-current="page" href="#">RETAIL</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link nav-menu" href="#">SME</a>
+                                    </li>
+                                    
+                                    <li className="nav-item">
+                                        <a className="nav-link nav-menu" href="#">CORPORATE</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link nav-menu" href="#">ABOUT US</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link nav-menu" href="#">COVID 19</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link nav-menu" href="#">CAMPGAINS</a>
+                                    </li>
+                                </ul>
+                                <form className="d-flex align-items-center" role="search">
+                                    <Link href="/search" className='pe-3'>
+                                        <Image src={searchLogo} alt="Search Logo" width={22} height={22} className="cursor-pointer" />
+                                    </Link>
+                                    <button className="btn btn-primary" type="submit">iSERVICE</button>
+                                </form>
+                            </div>
+                        </div>
                     </nav>
                 </div>
                 <div className="container hero-section pb-5">
                     <div className="row">
-                        <div className="col-md-5">
+                        <div className="col-xxl-5 col-xl-6 col-12">
                             <div className='d-flex flex-column justify-content-between h-100'>
                                 <div className='mb-5 pb-5'>
                                     <h1 className="mt-5 pt-5 pb-3">Chase Your Dream with us</h1>
@@ -64,7 +108,7 @@ export function Header() {
                                         <button className='btn btn-outline-primary px-4 py-2 fw-normal fs-6'>LOAN CALCULATOR</button>
                                     </div>
                                 </div>
-                                <div className="social-media-icons mt-5 pt-4 d-flex gap-4 align-items-end">
+                                <div className="social-media-icons mt-xxl-5 pt-4 d-flex gap-4 align-items-end">
                                     <div className='d-flex align-items-center gap-2 vertical-hr'>
                                         <Link href="/">
                                             <Image src={callLogo} alt="Call Logo" width={20} height={20} className="inline-block mr-2" />
@@ -88,7 +132,7 @@ export function Header() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-xxl-6 col-xl-6 col-md-6">
                             <Image src="/images/hero-image.png" alt="Hero Image" width={810} height={680} className="hero-img" />
                         </div>
                     </div>

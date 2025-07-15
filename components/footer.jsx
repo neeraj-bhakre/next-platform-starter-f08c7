@@ -56,7 +56,7 @@ export function Footer() {
 
     return (
         <section>
-            <div className="container footer-section py-5">
+            <div className="container footer-section py-5 px-5 px-md-0">
                 <div className='d-grid grid-cols-5'>
                     {footerSections.map((section, index) => (
                         <div key={index} className={`${index === 0 || index === 4 ? '' : ''}`}>
