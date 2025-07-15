@@ -14,7 +14,7 @@ export function IpdcAtGlance() {
             <div className='p-xxl-5'>
               <div className='pe-xxl-5 me-xxl-5 content-section'>
                 <h2 className='pb-2'>IPDC AT A GLANCE</h2>
-                <p className='mb-4 w-75 pb-4'>IPDC Finance Limited (previously known as "Industrial Promotion and Development Company of Bangladesh Limited") is the first private sector financial institution of the country established in 1981 by a distinguished group of shareholders namely International Finance Corporation (IFC), USA, German Investment and Development Company (DEG), Germany, The Aga Khan Fund for Economic Development (AKFED), Switzerland, Commonwealth Development Corporation (CDC), UK and the Government of Bangladesh</p>
+                <p className='mb-4 w-75 pb-4'>IPDC Finance Limited (previously known as &quot;Industrial Promotion and Development Company of Bangladesh Limited&quot;) is the first private sector financial institution of the country established in 1981 by a distinguished group of shareholders namely International Finance Corporation (IFC), USA, German Investment and Development Company (DEG), Germany, The Aga Khan Fund for Economic Development (AKFED), Switzerland, Commonwealth Development Corporation (CDC), UK and the Government of Bangladesh</p>
                 <div className='d-flex align-items-center gap-2 justify-content-center justify-content-md-start'>
                   <Link href='#' className='txt-primary text-decoration-none d-flex align-items-center'>
                   <div className='me-2  '>Read More</div>
